@@ -5,6 +5,12 @@ class StringCalculator:
         if not numbers_str:
             return 0
         
-        return int(numbers_str)
+        if ',' not in numbers_str:
+            return int(numbers_str)
+        
+        splitted = numbers_str.split(',')
+        numbers = [int(num) for num in splitted]
+        
+        return sum(numbers)
     
         

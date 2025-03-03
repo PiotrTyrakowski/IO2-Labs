@@ -12,3 +12,8 @@ class TestStringCalculator:
     def test_number_as_input(self, stringCalculator):
         input_string = "123"    
         assert stringCalculator.calculate(input_string) == 123
+
+    def test_sum_with_comma(self, stringCalculator):
+        input_string = "5,4"
+        assert stringCalculator.calculate(input_string) == 9
+
