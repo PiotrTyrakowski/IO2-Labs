@@ -20,3 +20,10 @@ class TestStringCalculator:
     def test_sum_with_newline(self, stringCalculator):
         input_string = "23\n6"
         assert stringCalculator.calculate(input_string) == 29
+
+    def test_sum_with_comma_or_newline(self, stringCalculator):
+
+        arr = ["4,5,3", "4\n5\n3", "4,5\n3", "4\n5,3"]
+
+        for el in arr:
+            assert stringCalculator.calculate(el) == 12
