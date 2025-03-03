@@ -17,3 +17,6 @@ class TestStringCalculator:
         input_string = "5,4"
         assert stringCalculator.calculate(input_string) == 9
 
+    def test_sum_with_newline(self, stringCalculator):
+        input_string = "23\n6"
+        assert stringCalculator.calculate(input_string) == 29
